@@ -1,0 +1,54 @@
+{
+  "name": "whinepad2",
+  "version": "2.0.0",
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
+  "scripts": {
+    "watch": "watch \"sh scripts/build.sh\" js/source js/__tests__ css/",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "babel",
+      "react"
+    ],
+    "extends": "eslint:recommended",
+    "env": {
+      "browser": true,
+      "jest": true
+    },
+    "rules": {
+      "comma-dangle": [
+        2,
+        "always-multiline"
+      ],
+      "react/jsx-uses-react": 1,
+      "react/jsx-uses-vars": 2
+    }
+  },
+  "jest": {
+    "unmockedModulePathPatterns": [
+      "node_modules/react",
+      "node_modules/react-dom",
+      "node_modules/react-addons-test-utils",
+      "node_modules/fbjs"
+    ]
+  },
+  "devDependencies": {
+    "babel-jest": "^23.6.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
+    "babel-preset-react": "^6.24.1",
+    "classnames": "^2.2.6",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-addons-test-utils": "^15.6.2",
+    "react-dom": "^16.5.2",
+    "react-test-renderer": "^16.5.2"
+  }
+}
